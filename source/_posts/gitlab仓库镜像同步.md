@@ -75,7 +75,7 @@ mkdir -p ~/repostories
 ```bash
 ~/gitlab-mirror/add_mirror.sh --git --project-name integration --mirror git@xxx.xxx.xxx.xx:deploy/integration.git
 # cron 定时同步
-0/1 * * * * /home/gitmirror/gitlab-mirrors/git-mirrors.sh
+*/1 * * * * /home/gitmirror/gitlab-mirrors/git-mirrors.sh
 ```
 
 ## 配置过程中遇到的问题
