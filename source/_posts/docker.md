@@ -4,7 +4,7 @@ date: 2019-03-14 11:31:00
 tags: docker
 ---
 
-Jenkins integrated Docker
+Jenkins integration
 
 <!-- more -->
 
