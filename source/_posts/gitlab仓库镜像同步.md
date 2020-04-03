@@ -1,7 +1,10 @@
 ---
-title: gitlab仓库镜像同步
+title: Gitlab仓库镜像同步
 date: 2020-01-07 15:11:42
+categories:
+- 笔记
 tags:
+- gitlab
 ---
 
 Gitlab仓库通过gitlab-mirror镜像同步

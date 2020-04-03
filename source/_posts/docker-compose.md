@@ -1,16 +1,20 @@
 ---
 title: Jenkins 集成 Hygieia
 date: 2019-03-25 18:43:03
-tags:
+categories:
+- 笔记
+tags: 
+- jenkins
+- docker-compose
+- hygieia
 ---
 
 
-### docker-compose 搭建 Hygieia 环境
-
-docker-compose.yml
+docker-compose 搭建 Hygieia 环境
 
 <!-- more -->
 
+## docker-compose.yml
 ```yaml
 version: "2"
 services:
@@ -95,11 +99,11 @@ $ docker-compose up -d hygieia-ui
 $ docker-compose up -d hygieia-jenkins-build-collector
 ```
 
-### Jenkins 安装 Hygieia 插件
+## Jenkins 安装 Hygieia 插件
 
 上传hygieia-publisher.hpi到Jenkins
 
-### Pipeline script
+## Pipeline script
 
 ```groovy
 node("master"){

@@ -1,7 +1,11 @@
 ---
 title: Docker
 date: 2019-03-14 11:31:00
-tags: docker
+categories:
+- 笔记
+tags: 
+- jenkins
+- docker
 ---
 
 Jenkins integration

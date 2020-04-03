@@ -1,6 +1,8 @@
 ---
 title: Create docker swarm for ubuntu
 date: 2019-03-15 11:34:56
+categories:
+- 笔记
 tags: docker
 ---
 

@@ -1,11 +1,14 @@
 ---
 title: 持续集成、自动化部署
 date: 2020-01-16 12:33:56
-tags:
+categories:
+- 笔记
+tags: 
+- CI
 ---
 
 
-## <center>自动化部署流程<center>
+自动化部署流程
 
 <!-- more -->
 ### 代码提交
