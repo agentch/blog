@@ -1,5 +1,5 @@
 ---
-title: Nginx配置优化
+title: Nginx 配置优化
 date: 2020-04-03 09:48:38
 categories:
 - 笔记

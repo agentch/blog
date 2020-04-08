@@ -101,7 +101,7 @@ $ docker-compose up -d hygieia-jenkins-build-collector
 
 ## Jenkins 安装 Hygieia 插件
 
-上传hygieia-publisher.hpi到Jenkins
+上传 hygieia-publisher.hpi 到 Jenkins
 
 ## Pipeline script
 

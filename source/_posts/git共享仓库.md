@@ -1,5 +1,5 @@
 ---
-title: Git共享仓库
+title: Git 共享仓库
 date: 2020-04-02 09:15:04
 categories:
 - 笔记
@@ -7,7 +7,7 @@ tags:
 - git
 ---
 
-服务器创建git共享仓库
+服务器创建 git 共享仓库
 
 <!-- more -->
 

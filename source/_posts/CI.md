@@ -28,7 +28,7 @@ cond_test(no)->op_rel
 ```
 
 
-开发提交代码到dev分支，自测通过后提merge request合并到release分支，交由测试人员测试，测试通过合并至master分支，等待上线。建议每次大版本升级打上tag，方便追溯。hotfix和feature暂不使用。
+开发提交代码到 dev 分支，自测通过后提 merge request 合并到 release 分支，交由测试人员测试，测试通过合并至 master 分支，等待上线。建议每次大版本升级打上 tag，方便追溯。hotfix 和 feature 暂不使用。
 
 ### 编译、打包、备份、部署
 ```flow
@@ -43,12 +43,12 @@ cond_build(yes)->op_backup
 cond_build(no)->op_git
 op_backup->e
 ```
-Jenkins通过Jenkinsfile分配节点进行编译、打包、备份、部署。
+Jenkins 通过 Jenkinsfile 分配节点进行编译、打包、备份、部署。
 
 ### Jenkinsfile示例
 
-java1.0自动化打包docker镜像及部署脚本示例：
-<font color=blue>这个脚本包含了所有的模块，实际使用中可以把Jenkinsfile进行拆分，每个模块单独写一个Jenkinsfile，待优化。</font>
+java1.0 自动化打包 docker 镜像及部署脚本示例：
+<font color=blue>这个脚本包含了所有的模块，实际使用中可以把 Jenkinsfile 进行拆分，每个模块单独写一个 Jenkinsfile，待优化。</font>
 ```groovy
 properties([
     buildDiscarder(

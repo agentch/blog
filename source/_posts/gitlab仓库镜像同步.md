@@ -1,5 +1,5 @@
 ---
-title: Gitlab仓库镜像同步
+title: Gitlab 仓库镜像同步
 date: 2020-01-07 15:11:42
 categories:
 - 笔记
@@ -7,18 +7,18 @@ tags:
 - gitlab
 ---
 
-Gitlab仓库通过gitlab-mirror镜像同步
+Gitlab 仓库通过 gitlab-mirror 镜像同步
 
 <!-- more -->
 
 ## 基础信息：
-gitlab版本：gitlab-ce:12.6.2
+gitlab 版本：gitlab-ce:12.6.2
 gitlab ssh 端口：12222
 gitlab-mirror：https://github.com/samrocketman/gitlab-mirrors.git
 
 
 ## 准备工作
-新建gitmirror用户，生成ssh key
+新建 gitmirror 用户，生成 ssh key
 ```bash
 adduser gitmirror
 su - gitmirror
@@ -26,20 +26,20 @@ ssh-keygen
 more ~/.ssh/id_rsa.pub
 ```
 
-公钥复制到两台gitlab配置免密登录，免密测试
+公钥复制到两台 gitlab 配置免密登录，免密测试
 ```bash
 ssh -T git@xxx.xxx.xxx.xx -p 12222
 Welcome to GitLab, @username!
 ```
 
-在~/.ssh目录下创建config文件：
+在~/.ssh 目录下创建 config 文件：
 ```bash
 Host "xxx.xxx.xxx.xx"
 Port "12222"
 ```
-"xxx.xxx.xxx.xx" 是gitlab mirror服务器ip
+"xxx.xxx.xxx.xx" 是 gitlab mirror 服务器 ip
 
-设置private_token调用gitlab api
+设置 private_token 调用 gitlab api
 
 ![gitlab][gitlab]
 ```bash
@@ -47,7 +47,7 @@ touch ~/private_token
 echo 'xxxxxxxxxx' > ~/private_token
 ```
 
-安装python-gitlab类库
+安装 python-gitlab 类库
 ```bash
 yum install -y python-pip
 pip install python-gitlab
@@ -68,7 +68,7 @@ gitlab_user="root"
 ssl_verify=false
 ```
 
-gitmirror用户根目录下创建repostories目录
+gitmirror 用户根目录下创建 repostories 目录
 ```bash
 # gitlab-mirror将代码clone到本地的默认路径
 mkdir -p ~/repostories
@@ -82,7 +82,7 @@ mkdir -p ~/repostories
 ```
 
 ## 配置过程中遇到的问题
-生成private_token的时候未勾选api，见上图
+生成 private_token 的时候未勾选 api，见上图
 ```bash
 Resolving gitlab remote.
 Traceback (most recent call last):
@@ -96,7 +96,7 @@ gitlab.exceptions.GitlabListError: 403: insufficient_scope
 There was an unknown issue with manage_gitlab_project.py
 ```
 
-gitlab mirror中已存在该仓库导致无法强制push(--project-name <font color=red>integration<font>)
+gitlab mirror 中已存在该仓库导致无法强制 push(--project-name <font color=red>integration<font>)
 ```bash
 Resolving gitlab remote.
 Creating mirror from ssh://git@xxx.xxx.xxx.xx:12222/deploy/integration.git
